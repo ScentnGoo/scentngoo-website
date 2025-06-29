@@ -1,4 +1,5 @@
-{
+/* Global Styles */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,11 +27,6 @@ body {
   background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
 }
 
 .logo {
@@ -94,21 +90,6 @@ body {
 
 .nav-link:hover {
   color: #ffd700;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(135deg, #ffd700, #ff6b35);
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-  width: 100%;
 }
 
 .cta-button-header {
@@ -193,12 +174,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradient-shift 3s ease-in-out infinite;
-}
-
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
 }
 
 .hero-subtitle {
@@ -306,17 +281,7 @@ body {
 .opportunity-section {
   background: linear-gradient(135deg, #1a1a1a, #2a1a4a);
   position: relative;
-}
-
-.opportunity-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.02"/><circle cx="75" cy="75" r="1" fill="%23ffd700" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-  opacity: 0.3;
+  padding: 80px 0;
 }
 
 .opportunity-grid {
@@ -520,6 +485,7 @@ body {
 .product-section {
   background: linear-gradient(135deg, #0a0a0a, #1a0a2e);
   position: relative;
+  padding: 80px 0;
 }
 
 .product-showcase {
@@ -838,119 +804,6 @@ body {
   box-shadow: 0 8px 30px rgba(255, 215, 0, 0.4);
 }
 
-/* Testimonials Section */
-.testimonials-section {
-  background: linear-gradient(135deg, #1a1a1a, #2a1a4a);
-  position: relative;
-}
-
-.testimonial-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.testimonial-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  border-radius: 24px;
-  padding: 40px;
-  text-align: center;
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  margin-bottom: 30px;
-}
-
-.testimonial-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.stars {
-  display: flex;
-  gap: 5px;
-}
-
-.star {
-  font-size: 24px;
-}
-
-.revenue-highlight {
-  background: linear-gradient(135deg, #ffd700, #ff6b35);
-  color: #000;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: 800;
-  font-size: 18px;
-}
-
-.testimonial-text {
-  font-size: 20px;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 30px;
-  font-style: italic;
-}
-
-.testimonial-author h4 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #ffd700;
-  margin-bottom: 5px;
-}
-
-.testimonial-author p {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.testimonial-navigation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.nav-btn {
-  background: linear-gradient(135deg, #ffd700, #ff6b35);
-  color: #000;
-  border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 20px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-}
-
-.nav-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
-}
-
-.testimonial-dots {
-  display: flex;
-  gap: 10px;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.dot.active {
-  background: linear-gradient(135deg, #ffd700, #ff6b35);
-  transform: scale(1.2);
-}
-
 /* Investment Section */
 .investment-section {
   position: relative;
@@ -1088,36 +941,6 @@ body {
   border-radius: 10px;
 }
 
-.guarantee {
-  margin: 40px 0;
-  padding: 30px;
-  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 255, 0, 0.1));
-  border-radius: 16px;
-  border: 1px solid rgba(255, 215, 0, 0.3);
-}
-
-.guarantee-badge {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  text-align: left;
-}
-
-.guarantee-icon {
-  font-size: 32px;
-}
-
-.guarantee h4 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #ffd700;
-  margin-bottom: 5px;
-}
-
-.guarantee p {
-  color: rgba(255, 255, 255, 0.8);
-}
-
 .investment-cta {
   text-align: center;
 }
@@ -1152,71 +975,6 @@ body {
   color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
   font-style: italic;
-}
-
-/* Support Section */
-.support-section {
-  background: linear-gradient(135deg, #0a0a0a, #1a0a2e);
-  padding: 80px 0;
-}
-
-.support-content {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.support-content h2 {
-  font-size: 36px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  color: #ffd700;
-}
-
-.support-content p {
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 50px;
-}
-
-.support-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.support-item {
-  text-align: center;
-  padding: 30px 20px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 215, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.support-item:hover {
-  transform: translateY(-10px);
-  border-color: rgba(255, 215, 0, 0.3);
-  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.1);
-}
-
-.support-icon {
-  font-size: 48px;
-  margin-bottom: 20px;
-  display: block;
-}
-
-.support-item h3 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #ffd700;
-  margin-bottom: 15px;
-}
-
-.support-item p {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
 }
 
 /* Modal Styles */
@@ -1538,6 +1296,7 @@ body {
 .footer {
   background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
   border-top: 1px solid rgba(255, 215, 0, 0.2);
+  padding: 60px 0 30px;
 }
 
 .footer-content {
@@ -1554,24 +1313,9 @@ body {
   margin-bottom: 20px;
 }
 
-.footer-section p,
-.footer-section ul li {
+.footer-section p {
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 10px;
-}
-
-.footer-section ul {
-  list-style: none;
-}
-
-.footer-section ul li a {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-  color: #ffd700;
 }
 
 .footer-bottom {
@@ -1618,37 +1362,6 @@ body {
     grid-template-columns: 1fr;
   }
   
-  .product-features {
-    grid-template-columns: 1fr;
-  }
-  
-  .roi-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .includes-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .testimonial-header {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .guarantee-badge {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .support-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  
   .cart-item {
     flex-direction: column;
     text-align: center;
@@ -1669,18 +1382,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .header {
-    padding: 0 20px;
-  }
-  
-  .logo-text {
-    font-size: 24px;
-  }
-  
-  .nav-link {
-    display: none;
-  }
-  
   .hero-content {
     padding: 120px 20px 0;
   }
@@ -1691,10 +1392,6 @@ body {
   
   .stat-number {
     font-size: 36px;
-  }
-  
-  .roi-grid {
-    grid-template-columns: 1fr;
   }
   
   .price {
@@ -1708,10 +1405,6 @@ body {
   
   .modal-body {
     padding: 20px;
-  }
-  
-  .modal-header {
-    padding: 20px 20px 15px;
   }
   
   .vending-machine-display {
